@@ -1,3 +1,5 @@
+# Visualizations, the grammar of graphics, and `ggplot2`
+
 ## Learning objectives
 
 * Identify the importance of graphics in communicating information
