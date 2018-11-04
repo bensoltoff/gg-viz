@@ -67,7 +67,7 @@ datasaurus_model %>%
 
 ----
 
-```{r datasaurus-graph, echo = FALSE, fig.show = "animate", warning = FALSE, interval = 0.067}
+```{r datasaurus-graph, echo = FALSE, warning = FALSE}
 ggplot(datasaurus_dozen, aes(x = x, y = y))+
   geom_point() +
   theme_minimal() +
