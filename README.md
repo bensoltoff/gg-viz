@@ -15,7 +15,6 @@
     * If you have additional time, also read [*A Layered Grammar of Graphics*](http://www-tandfonline-com.proxy.uchicago.edu/doi/abs/10.1198/jcgs.2009.07098)
 * [How to build a complicated, layered graphic](https://cfss.uchicago.edu/dataviz_minard.html)
 * [Practice generating layered graphics using `ggplot2`](https://cfss.uchicago.edu/dataviz_gapminder.html)
-
 * [Exploring Minard's 1812 plot with `ggplot2`](https://github.com/andrewheiss/fancy-minard) - a much fancier (and more complex) version
 
 ## Additional resources
