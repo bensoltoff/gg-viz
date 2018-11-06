@@ -1,4 +1,4 @@
-# Visualizations, the grammar of graphics, and `ggplot2`
+# Data visualizations, the grammar of graphics, and `ggplot2`
 
 ## Learning objectives
 

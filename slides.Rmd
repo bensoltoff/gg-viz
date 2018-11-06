@@ -1,5 +1,5 @@
 ---
-title: "Visualizations, the grammar of graphics, and `ggplot2`"
+title: "Data visualizations, the grammar of graphics, and `ggplot2`"
 author: |
   | Benjamin Soltoff
   | University of Chicago
