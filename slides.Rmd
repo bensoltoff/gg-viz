@@ -7,7 +7,7 @@ output: rcfss::cfss_slides
 ---
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(cache = TRUE, echo = FALSE)
+knitr::opts_chunk$set(cache = TRUE, echo = FALSE, fig.align = "center")
 
 set.seed(1234)
 
@@ -18,7 +18,8 @@ library(broom)
 library(datasauRus)
 library(gganimate)
 
-theme_set(theme_gray(base_size = 18))
+base_size <- 18
+theme_set(theme_gray(base_size = base_size))
 ```
 
 ----
@@ -61,7 +62,7 @@ datasaurus_model %>%
        x = NULL,
        y = "Estimated parameter") +
   coord_flip() +
-  theme_minimal() +
+  theme_minimal(base_size = base_size) +
   theme(legend.position = "none")
 ```
 
@@ -70,18 +71,18 @@ datasaurus_model %>%
 ```{r datasaurus-graph, echo = FALSE, warning = FALSE}
 ggplot(datasaurus_dozen, aes(x = x, y = y))+
   geom_point() +
-  theme_minimal() +
+  theme_minimal(base_size = base_size) +
   transition_states(dataset, 3, 1) + 
   ease_aes('cubic-in-out')
 ```
 
 ----
 
-```{r datasaurus-graph-static, echo = FALSE, fig.height = 8, fig.width = 8}
+```{r datasaurus-graph-static, echo = FALSE}
 ggplot(datasaurus_dozen, aes(x = x, y = y))+
   facet_wrap(~ dataset) +
   geom_point() +
-  theme_minimal()
+  theme_minimal(base_size = base_size)
 ```
 
 ## Grammar
@@ -352,22 +353,22 @@ ggplot(mpg, aes(displ, hwy)) +
   geom_point()
 ```
 
-## Defaults {.scrollable}
+## Defaults
 
-```{r default4, echo = TRUE}
+```{r default4, echo = TRUE, fig.asp = 0.6}
 ```
 
-## Defaults {.scrollable}
+## Defaults
 
-```{r default5, echo = TRUE, message = FALSE}
+```{r default5, echo = TRUE, message = FALSE, fig.asp = 0.6}
 ggplot(mpg, aes(displ, hwy)) +
   geom_point() +
   geom_smooth()
 ```
 
-## Defaults {.scrollable}
+## Defaults
 
-```{r default6, echo = TRUE, error = TRUE, message = FALSE}
+```{r default6, echo = TRUE, error = TRUE, message = FALSE, fig.asp = 0.6}
 ggplot(mpg) +
   geom_point(aes(displ, hwy)) +
   geom_smooth()
@@ -415,9 +416,9 @@ cities
 * Faceting
 </div>
 
-## {.scrollable}
+----
 
-```{r plot_troops, echo = TRUE}
+```{r plot_troops, echo = TRUE, fig.asp = 0.58}
 plot_troops <- ggplot(data = troops,
                       mapping = aes(x = long, y = lat)) +
   geom_path(aes(size = survivors,
@@ -426,17 +427,17 @@ plot_troops <- ggplot(data = troops,
 plot_troops
 ```
 
-## {.scrollable}
+----
 
-```{r plot_both, echo = TRUE}
+```{r plot_both, echo = TRUE, fig.asp = 0.6}
 plot_both <- plot_troops + 
   geom_text(data = cities, mapping = aes(label = city), size = 4)
 plot_both
 ```
 
-## {.scrollable}
+----
 
-```{r plot_polished, echo = TRUE}
+```{r plot_polished, echo = TRUE, fig.asp = 0.5}
 plot_polished <- plot_both +
   scale_size(range = c(0, 12),
              breaks = c(10000, 20000, 30000),
@@ -449,9 +450,9 @@ plot_polished <- plot_both +
 plot_polished
 ```
 
-## {.scrollable}
+----
 
-```{r plot_final, echo = TRUE}
+```{r plot_final, echo = TRUE, fig.asp = 0.65}
 plot_polished +
   theme_void() +
   theme(legend.position = "none")
