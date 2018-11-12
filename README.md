@@ -9,7 +9,7 @@
 
 ## Slides and class materials
 
-* [Slides](slides.html)
+* [Slides](https://www.bensoltoff.com/gg-viz/slides.html)
 * [Why visualize data?](https://cfss.uchicago.edu/dataviz_why.html)
 * [The grammar of graphics](https://cfss.uchicago.edu/dataviz_grammar_of_graphics.html)
     * If you have additional time, also read [*A Layered Grammar of Graphics*](https://www.tandfonline.com/doi/pdf/10.1198/jcgs.2009.07098)
